@@ -1,3 +1,3 @@
 # Bookseller-
 
-Small project for a bookselling program
+Small project for a bookselling program, work in progress
