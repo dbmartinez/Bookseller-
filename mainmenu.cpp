@@ -59,15 +59,15 @@ int main()
 		switch(choice)
 		{
 			case 1:
-				cash();
+				cash.cashier();
 				break;
 
 			case 2:
-				iMenu();
+				imenu.invMenu();
 				break;
 
 			case 3:
-				rport();
+				rport.reports();
 				break;
 		}
 
