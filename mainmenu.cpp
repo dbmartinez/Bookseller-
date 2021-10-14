@@ -21,7 +21,7 @@ int main()
 	// variables
 	int choice;
 
-	// call cthe classes
+	// call the classes
 	Cashier cash;
 	Invmenu imenu;
 	Reports rport;
