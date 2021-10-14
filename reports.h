@@ -5,13 +5,17 @@
 
 class Reports
 {
-	void reports();
-	void repListing();
-	void repWholesale();
-	void repRetail();
-	void repQty();
-	void repCost();
-	void repAge();
+	public:
+		Reports();
+		~Reports();
+
+		void reports();
+		void repListing();
+		void repWholesale();
+		void repRetail();
+		void repQty();
+		void repCost();
+		void repAge();
 
 };
 #endif

@@ -6,7 +6,19 @@
 using namespace std;
 
 
-void reports()
+Reports::Reports()
+{
+
+
+}
+
+Reports::~Reports()
+{
+
+
+}
+
+void Reports::reports()
 {
 	// variables
 	int choice;
@@ -79,37 +91,37 @@ void reports()
 }
 
 // repListing function
-void repListing()
+void Reports::repListing()
 {
 	cout << "\nYou've Selected Inventory Listing\n";
 }
 
 // repWholesale function
-void repWholesale()
+void Reports::repWholesale()
 {
 	cout << "\nYou've Selected Wholesale Value\n";
 }
 
 // repRetail function
-void repRetail()
+void Reports::repRetail()
 {
 	cout << "\nYou've Selected Retail Value\n";
 }
 
 // repQty function
-void repQty()
+void Reports::repQty()
 {
 	cout << "\nYou've Selected Listing by Quantity\n";
 }
 
 // repCost function
-void repCost()
+void Reports::repCost()
 {
 	cout << "\nYou've Selected Listing by Cost\n";
 }
 
 // repAge function
-void repAge()
+void Reports::repAge()
 {
 	cout << "\nYou've Selected Listing by Age\n";
 }

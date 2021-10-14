@@ -3,12 +3,12 @@
 #ifndef BOOKINFO_H
 #define BOOKINFO_H
 
-class bookinfo
+class Bookinfo
 {
-
-	bookinfo();
-	~bookinfo();
-	void bookInfo();
+	public:
+		Bookinfo();
+		~Bookinfo();
+		void bookInfo();
 
 };
 #endif

@@ -6,20 +6,20 @@
 using namespace std;
 
 // default constructor
-bookinfo::bookinfo()
+Bookinfo::Bookinfo()
 {
 
 
 }
 
 // destructor
-bookinfo::~bookinfo()
+Bookinfo::~Bookinfo()
 {
 
 
 }
 
-void bookinfo::bookInfo()
+void Bookinfo::bookInfo()
 {
 	// menu title
 	cout << "\t\tSerendipity Booksellers\n";
