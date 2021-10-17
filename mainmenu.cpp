@@ -21,7 +21,7 @@ int main()
 	// variables
 	int choice;
 
-	// call the classes
+	// create the objects of the classes
 	Cashier cash;
 	Invmenu imenu;
 	Reports rport;
@@ -56,25 +56,25 @@ int main()
 			cout << endl;
 		}
 
+		// determine which menu from users choice
 		switch(choice)
 		{
 			case 1:
-				cash.cashier();
+				cash.cashier(); // call the method cashier
 				break;
 
 			case 2:
-				imenu.invMenu();
+				imenu.invMenu(); // call the method invMenu
 				break;
 
 			case 3:
-				rport.reports();
+				rport.reports(); // call the method reports
 				break;
 		}
 
 		// if user quits program
 		if(choice == 4)
 		{
-			// exit program
 			cout << "\nThank You for Shopping at Serendipity Booksellers.\n";
 			cout << "Goodbye!\n";
 			exit(0);
@@ -82,7 +82,7 @@ int main()
 
 		cout << endl;
 
-	} while(choice != 4);
+	} while(choice != 4); // repeat if user doesn't pick 4
 
 	return 0;
 }

@@ -12,17 +12,15 @@ using namespace std;
 // constant function
 const double SALES_TAX = 0.06; 
 
-
+// default constructor
 Cashier::Cashier()
 {
 
-
 }
 
-
+// destructor
 Cashier::~Cashier()
 {
-
 	
 }
 
@@ -37,6 +35,7 @@ void Cashier::cashier()
 
 	// title
 	cout << "Serendipity Book Sellers\n\n";
+	cin.ignore();
 	
 	do
 	{
@@ -99,7 +98,7 @@ void Cashier::cashier()
 
 		// if user quits
 		if(toupper(again) == 'N')
-			cout << "\n\nThank You for Shopping Serendipity!\n";
+			cout << "\n\nReturning to Main Menu.\n";
 
 	} while(toupper(again) == 'Y');
 

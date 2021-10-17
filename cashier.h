@@ -5,6 +5,8 @@
 
 class Cashier
 {
+	private:
+
 	public:
 		Cashier();
 		~Cashier();

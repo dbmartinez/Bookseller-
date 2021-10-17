@@ -5,6 +5,8 @@
 
 class Bookinfo
 {
+	private:
+
 	public:
 		Bookinfo();
 		~Bookinfo();

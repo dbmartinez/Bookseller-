@@ -2,25 +2,29 @@
 // inventory menu
 
 #include<iostream>
+#include<string>
+#include<fstream>
 #include"invmenu.h"
 using namespace std;
 
+// default constructor
 Invmenu::Invmenu()
 {
-
+	choice = 0;
 
 }
 
+// destructor
 Invmenu::~Invmenu()
 {
 
 
 }
 
-//
+// inventory menu
 void Invmenu::invMenu()
 {
-	// variables
+	// local variables
 	int choice;
 
 	// main title
@@ -42,6 +46,7 @@ void Invmenu::invMenu()
 		cout << "\nEnter Your Choice: ";
 		cin >> choice;
 
+		// going to the area where the user choose
 		switch(choice)
 		{
 			case 1:
@@ -77,29 +82,76 @@ void Invmenu::invMenu()
 		cout << endl;
 
 	} while(choice != 5);
-
 }
 
 // function lookUpBook
 void Invmenu::lookUpBook()
 {
+	// local variables
+	string fileName = "bookinfo.txt";
+	string bookTitle;
+	ifstream readFile;
+
+	// open file to read from
+	readFile.open(fileName);
+
 	cout << "\nYou've selected to look up book.\n";
+	cin.ignore();
+
+	cout << "\nEnter in a Book that You Would like to look up: ";
+	getline(cin, bookTitle);
+
+
+
+
+
+	readFile.close();
 }
 
 // function addBook
 void Invmenu::addBook()
 {
+	// local variables
+	string enterBook;
+	ofstream writeFile;
+
+	// open textfile to write to
+	writeFile.open("bookinfo.txt");
+
 	cout << "\nYou've selected to add a book.\n";
+	cin.ignore();
+
+	cout << "\nEnter a Book to Add: ";
+	getline(cin, enterBook);
+	writeFile << enterBook;
+
+	cout << "\n" << enterBook << " Added to Database.\n";
+
+
+
+	writeFile.close();
 }
 
 // function editBook
 void Invmenu::editBook()
 {
+	// local variable
+	string editBook;
+
 	cout << "\nYou've selected to edit a book.\n";
+
+	cout << "\nEnter the Book You Would like to Edit: ";
+	cin >> editBook;
 }
 
 // function lookUpBook
 void Invmenu::deleteBook()
 {
-	cout << "\nYou've selected to delete a book.\n";
+	// local variable
+	string delete_book;
+
+	cout << "\nYou've selected to delete a book.\n";\
+
+	cout << "\nEnter the Book You Would like to Delete: ";
+	getline(cin, delete_book);
 }

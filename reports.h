@@ -5,6 +5,8 @@
 
 class Reports
 {
+	private:
+
 	public:
 		Reports();
 		~Reports();
