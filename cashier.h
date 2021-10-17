@@ -6,6 +6,7 @@
 class Cashier
 {
 	private:
+		const double SALES_TAX;
 
 	public:
 		Cashier();

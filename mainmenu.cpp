@@ -10,10 +10,7 @@
 #include"cashier.h"
 #include"invmenu.h"
 #include"reports.h"
-using namespace std;
-
-// constant function
-const int SIZE = 35;
+using namespace std;\
 
 // main function
 int main()

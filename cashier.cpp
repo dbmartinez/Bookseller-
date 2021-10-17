@@ -9,11 +9,8 @@
 #include"cashier.h"
 using namespace std;
 
-// constant function
-const double SALES_TAX = 0.06; 
-
 // default constructor
-Cashier::Cashier()
+Cashier::Cashier():SALES_TAX(0.06)
 {
 
 }
@@ -101,5 +98,4 @@ void Cashier::cashier()
 			cout << "\n\nReturning to Main Menu.\n";
 
 	} while(toupper(again) == 'Y');
-
 }

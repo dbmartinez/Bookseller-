@@ -7,10 +7,13 @@
 #include"invmenu.h"
 using namespace std;
 
+// constant variable
+const int SIZE = 10;
+
 // default constructor
 Invmenu::Invmenu()
 {
-	choice = 0;
+	
 
 }
 
@@ -102,9 +105,6 @@ void Invmenu::lookUpBook()
 	getline(cin, bookTitle);
 
 
-
-
-
 	readFile.close();
 }
 
@@ -112,7 +112,9 @@ void Invmenu::lookUpBook()
 void Invmenu::addBook()
 {
 	// local variables
-	string enterBook;
+	string enterBook[SIZE], publisher[SIZE], isbn_num[SIZE], a_name[SIZE], purchase_date[SIZE];
+	int bookQuantity[SIZE], amount_of_books;
+	double wholeCost[SIZE], retailCost[SIZE];
 	ofstream writeFile;
 
 	// open textfile to write to
@@ -120,15 +122,48 @@ void Invmenu::addBook()
 
 	cout << "\nYou've selected to add a book.\n";
 	cin.ignore();
+	cout << "\nHow Many Books Would You Like to Add?: ";
+	cin >> amount_of_books;
 
-	cout << "\nEnter a Book to Add: ";
-	getline(cin, enterBook);
-	writeFile << enterBook;
+	// loop the amount of book the user would like to add
+	for(int i = 0; i < amount_of_books; i++)
+	{
+		cout << "\nEnter in the ISBN Number: ";
+		//getline(cin, isbn_num[i]);
+		writeFile << isbn_num[i];
+		cin.ignore();
 
-	cout << "\n" << enterBook << " Added to Database.\n";
+		cout << "\nEnter in the Author's Name: ";
+		//getline(cin, a_name[i]);
+		writeFile << a_name[i];
+
+		cout << "\nEnter a Book to Add: ";
+		//getline(cin, enterBook[i]);
+		writeFile << enterBook[i];
+
+		cout << "\nEnter in the Publishers name: ";
+		getline(cin, publisher[i]);
+
+		cout << "\nEnter in the Date of Purchase: ";
+		getline(cin, purchase_date[i]);
+
+		cout << "\nEnter in the Quantity of Books: ";
+		cin >> bookQuantity[i];
+
+		cout << "\nEnter in the Books Wholesale Cost: $";
+		cin >> wholeCost[i];
+
+		cout << "\nEnter in the Books Retail Cost: $";
+		cin >> retailCost[i];
 
 
+		for(int j = 0; j < amount_of_books; j++)
+		{
+			cout << isbn_num[j] << a_name[j] << enterBook[j] << publisher[j] << purchase_date[j] << bookQuantity[j] << wholeCost[j] << retailCost[j];
+		}
+	}	
 
+	cout << "\nBook Information has been added to the Database.\n";
 	writeFile.close();
 }
 

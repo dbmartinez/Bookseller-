@@ -6,8 +6,7 @@
 class Invmenu
 {
 	private:
-		int choice;
-
+		
 
 	public:
 		Invmenu();
